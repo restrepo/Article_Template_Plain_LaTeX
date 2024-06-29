@@ -1,0 +1,107 @@
+\documentclass[12pt,letterpaper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Force pdflatex processing even with "$ latex" (required by arXiv)
+%TODO: Change S for -S in first diagram of fig. 1.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[top=3cm, bottom=3cm, left=1.5cm, right=2cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\definecolor{nicered}{rgb}{0.7,0.1,0.1}
+\definecolor{nicegreen}{rgb}{0.1,0.5,0.1}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,citecolor= nicegreen,linkcolor=nicered]{hyperref}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{cancel}
+\usepackage{tipa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcolumntype{R}{>{$}r<{$}} % math-mode version of "r" column type
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{dsfont}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{tikz}
+\newcommand{\ReportNumbers}[1]{%
+\begin{tikzpicture}[overlay, remember picture]
+\path (current page.north east) ++(-1,-1) node[below left] {#1};
+\end{tikzpicture}
+}
+
+
+\newcommand{\nb}[1]{{\color{blue}[NB: #1]}}
+\newcommand{\dr}[1]{{\color{darkgreen}[DR: #1]}}
+\def\c{,\allowbreak}
+
+\usepackage[affil-it]{authblk}
+%%%%  https://tex.stackexchange.com/a/581267/59580 %%%%
+% % Get Logo with $ xelatex orcid.tex
+% \documentclass{standalone}
+% \usepackage{academicons,xcolor}
+% \definecolor{orcidlogocol}{HTML}{A6CE39}
+% \begin{document}
+% \textcolor{orcidlogocol}{\aiOrcid}
+% \end{document}
+% \usepackage{orcidlink}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newcommand{\orcid}{\includegraphics[height=\fontcharht\font`A]{orcid}}
+\newcommand{\orcidlink}[1]{\href{https://orcid.org/#1}{{\orcid}}}
+
+
+
+\title{Effective Dirac neutrino mass operator in the Standard Model  with a local Abelian extension}
+
+\author{ Diego Restrepo\orcidlink{0000-0001-6455-5564}\footnote{\href{mailto:restrepo@udea.edu.co}{restrepo@udea.edu.co}} }
+\author{ Second Author\orcidlink{0000-0000-0000-0000}\footnote{\href{mailto:second@udea.edu.co}{second@udea.edu.co}} }
+
+
+\affil{\small 
+Instituto de Física, Universidad de Antioquia\\
+Calle 70 \# 52-21, Apartado Aéreo 1226, Medellín, Colombia
+}
+\date{}
+\begin{document}
+\maketitle
+%\ReportNumbers{\footnotesize PI/UAN-2021-696FT}
+
+\begin{abstract}
+We present ...
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Adjectives in English absolutely have to be in this order: opinion-size-age-shape-color-origin-material-purpose noun \url{https://archive.org/details/TheElementsOfEloquence}
+
+This work is organized as follows.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions} 
+\label{sec:con}
+We found ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgments}
+The  work  of  DR  is  supported  by  Sostenibilidad  UdeA,  and the UdeA/CODI  Grants 2017-16286 and 2020-33177.
+
+
+
+
+%%%%%%%
+\bibliographystyle{apsrev4-1long}
+\bibliography{biblio}
+
+\end{document}
+
+
